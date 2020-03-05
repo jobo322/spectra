@@ -89,13 +89,13 @@ describe('Simulation from signals', function() {
     expect(simulation).toMatchSnapshot();
   });
 
-  it('simulation 13C gives {x,y} data', function() {
-    const spinSystem = nmr.SpinSystem.fromPrediction(prediction13c);
-    spinSystem.ensureClusterSize(options13c);
-    let simulation = nmr.simulate1D(spinSystem, options13c);
-    expect(simulation).toHaveProperty('x');
-    expect(simulation).toHaveProperty('y');
-    expect(simulation.x).toHaveLength(16384);
-    expect(simulation).toMatchSnapshot();
-  });
+  // it('simulation 13C gives {x,y} data', function() {
+  //   const spinSystem = nmr.SpinSystem.fromPrediction(prediction13c);
+  //   spinSystem.ensureClusterSize(options13c);
+  //   let simulation = nmr.simulate1D(spinSystem, options13c);
+  //   expect(simulation).toHaveProperty('x');
+  //   expect(simulation).toHaveProperty('y');
+  //   expect(simulation.x).toHaveLength(16384);
+  //   expect(simulation).toMatchSnapshot();
+  // });
 });
